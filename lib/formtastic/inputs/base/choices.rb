@@ -15,7 +15,7 @@ module Formtastic
         end
 
         def choices_group_wrapping(&block)
-          template.content_tag(:ol,
+          template.content_tag(:div,
             template.capture(&block),
             choices_group_wrapping_html_options
           )

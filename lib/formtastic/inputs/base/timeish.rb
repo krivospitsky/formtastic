@@ -95,7 +95,7 @@ module Formtastic
             fragments_wrapping do
               hidden_fragments <<
               fragments_label <<
-              template.content_tag(:ol,
+              template.content_tag(:div,
                 fragments.map do |fragment|
                   fragment_wrapping do
                     fragment_label_html(fragment) <<
@@ -218,7 +218,7 @@ module Formtastic
         end
         
         def fragments_inner_wrapping(&block)
-          template.content_tag(:ol,
+          template.content_tag(:div,
             template.capture(&block)
           )
         end
